@@ -58,6 +58,6 @@ else if( computerMove == 'nożyce' && playerMove == 'nożyce'){
 else if( computerMove == 'nożyce' && playerMove == 'kamień'){
     printMessage('Wygrywasz!');
 }
-else( computerMove && playerMove == 'nieznany ruch'){
+else{
     printMessage('Błąd!');
 }
