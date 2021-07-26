@@ -7,27 +7,27 @@ function playGame(playerInput) {
 
     let argComputerMove = getMoveName(randomNumber);
 
-    function getMoveName(randomNumber) {
+    function getMoveName(number) {
     
-        if (randomNumber == 1) {
+        if (number == 1) {
             return 'kamień';
-        } else if (randomNumber == 2) {
+        } else if (number == 2) {
             return 'papier';
-        } else if (randomNumber == 3) {
+        } else if (number == 3) {
             return 'nożyce';
         }
     }
-    printMessage('Komputer zagrał: ' + randomNumber);
+    printMessage('Komputer zagrał: ' + argComputerMove);
   
     let argPlayerMove = getMoveName(playerInput);
     
-    let = displayResult(argComputerMove, argPlayerMove);
+    displayResult(argComputerMove, argPlayerMove);
 
     function displayResult(argComputerMove, argPlayerMove) {
         console.log('moves:', argComputerMove, argPlayerMove);
     
 
-        if(argComputerMove == 'kamień' && argPlayerMove == 'papier') {
+        if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
             printMessage('Wygrywasz!');
         } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
             printMessage('Wygrywasz!');
