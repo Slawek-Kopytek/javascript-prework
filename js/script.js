@@ -21,10 +21,9 @@
   
         const argPlayerMove = getMoveName(playerInput);
     
-        displayResult(argComputerMove, argPlayerMove);
-
-        function displayResult(argComputerMove, argPlayerMove) {
-        console.log('moves:', argComputerMove, argPlayerMove);
+        const displayResult = function(argComputerMove, argPlayerMove) {
+            console.log('moves:', argComputerMove, argPlayerMove);
+        
             if (argComputerMove == 'kamień' && argPlayerMove == 'papier') {
                 printMessage('Wygrywasz!');
             } else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce') {
@@ -33,7 +32,7 @@
                 printMessage('Wygrywasz!');
             } else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
                 printMessage('Przegrywasz!');
-            } else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
+            }else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
                 printMessage('Przegrywasz!');
             } else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
                 printMessage('Przegrywasz!');
@@ -47,6 +46,7 @@
                 printMessage('Błąd!');
             }
         }
+        displayResult (argComputerMove, argPlayerMove);
     }
     document.getElementById('play-rock').addEventListener('click', function () {
         playGame(1);
