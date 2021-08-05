@@ -1,14 +1,12 @@
 {
-    function playGame(playerInput) {
+    const playGame = function(playerInput) {
         
         clearMessages();
         
         const randomNumber = Math.floor(Math.random() * 3 + 1); 
-        console.log('Wylosowana liczba to: ' + randomNumber);
 
-        const argComputerMove = getMoveName(randomNumber);
-
-        function getMoveName(number) {
+        const getMoveName = function(number) {
+            console.log('moves:', number);
             if (number == 1) {
                 return 'kamień';
             } else if (number == 2) {
@@ -17,6 +15,11 @@
                 return 'nożyce';
             }
         }
+
+        const argComputerMove = getMoveName(randomNumber);
+
+        getMoveName(playerInput);
+
         printMessage('Komputer zagrał: ' + argComputerMove);
   
         const argPlayerMove = getMoveName(playerInput);
@@ -46,7 +49,7 @@
                 printMessage('Błąd!');
             }
         }
-        displayResult (argComputerMove, argPlayerMove);
+        displayResult(argComputerMove, argPlayerMove);
     }
     document.getElementById('play-rock').addEventListener('click', function () {
         playGame(1);
@@ -57,4 +60,8 @@
     document.getElementById('play-scissors').addEventListener('click', function () {
         playGame(3);
     });
+    
+    const playerInput = playGame(1, 2, 3);
+
+    playGame(playerInput);
 }
