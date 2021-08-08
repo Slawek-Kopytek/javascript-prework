@@ -60,8 +60,6 @@
     document.getElementById('play-scissors').addEventListener('click', function () {
         playGame(3);
     });
-    
-    const playerInput = playGame(1, 2, 3);
 
     playGame(playerInput);
 }
